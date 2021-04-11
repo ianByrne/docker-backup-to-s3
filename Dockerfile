@@ -1,8 +1,8 @@
 FROM debian:jessie
-MAINTAINER Ilya Stepanov <dev@ilyastepanov.com>
+LABEL authors="Ilya Stepanov <dev@ilyastepanov.com>, @ianByrne"
 
 RUN apt-get update && \
-    apt-get install -y python python-pip cron && \
+    apt-get install -y python python-pip cron wget && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install s3cmd
